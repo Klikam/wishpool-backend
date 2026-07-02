@@ -1,15 +1,23 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-interface Config {
+interface ServerConfig {
   port: number;
   nodeEnv: string;
 }
 
-const config: Config = {
+const serverConfig: ServerConfig = {
   port: Number(process.env.PORT) || 3000,
-  nodeEnv: process.env.NODE_ENV || "development",
+  nodeEnv: process.env.NODE_ENV || 'development',
 };
 
-export default config;
+interface DBConfig {
+  uri: string;
+}
+
+const dbConfig: DBConfig = {
+  uri: process.env.DB_CONNECTION_STRING || '',
+};
+
+export { serverConfig, dbConfig };
