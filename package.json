@@ -28,11 +28,6 @@
     "express": "^5.2.1",
     "mongoose": "^9.7.3"
   },
-  "pnpm": {
-    "overrides": {
-      "mongodb": "^7.4.0"
-    }
-  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/cors": "^2.8.19",
